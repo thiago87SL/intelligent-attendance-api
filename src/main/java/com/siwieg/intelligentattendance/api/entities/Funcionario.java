@@ -158,6 +158,15 @@ public class Funcionario implements Serializable {
 		this.dataAtualizacao = dataAtualizacao;
 	}
 	
+	@Column(name="senha", nullable=false)
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
 	@ManyToOne(fetch=FetchType.EAGER)
 	public Empresa getEmpresa() {
 		return empresa;
